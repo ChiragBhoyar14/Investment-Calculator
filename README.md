@@ -1,27 +1,59 @@
-# EssentialsPractice
+# Investment Calculator
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.0-next.2.
+This project is an Angular-based Investment Calculator created for learning and practice purposes.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Enter initial investment, annual investment, expected return, and duration.
+- Calculates annual investment growth and displays results in a table.
+- Uses Angular Module components, signals and service.
 
-## Code scaffolding
+## Technology Stack
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Angular**: v18 (latest features including module components, signals and sservice)
+- **TypeScript**: v5.4 (type-safe, modern JavaScript superset)
 
-## Build
+## Getting Started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Prerequisites
 
-## Running unit tests
+- [Node.js](https://nodejs.org/)
+- [Angular CLI](https://angular.io/cli)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Installation
 
-## Running end-to-end tests
+1. Clone the repository:
+   ```sh
+   git clone <your-repo-url>
+   cd Investment-Calculator
+   ```
+2. Install dependencies:
+   ```sh
+   npm install
+   ```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Running the Application
 
-## Further help
+Start the development server:
+```sh
+npm start
+```
+Navigate to [http://localhost:4200](http://localhost:4200) in your browser.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Project Structure
+
+- `src/app/user-input/` - User input form for investment parameters.
+- `src/app/investment-result/` - Displays calculated investment results.
+- `src/app/investment.service.ts` - Business logic for calculations.
+- `src/app/investment-input.model.ts` - Type definitions.
+
+## Learning Goals
+
+- Practice Angular module components, signals and service.
+- Understand reactive state management.
+- Learn how to structure Angular projects.
+- Gain experience with TypeScript for safer, scalable code.
+
+## License
+
+This project is for educational
