@@ -1,7 +1,6 @@
-import { Component, EventEmitter, inject, Output } from '@angular/core';
+import { Component,inject, signal } from '@angular/core';
 import{FormsModule} from '@angular/forms';
-import { AppService } from '../app.service';
-import { InvestmentInputModel } from '../investment-input.model';
+import { InvestmentService } from '../investment.service';
 
 @Component({
   selector: 'app-user-input',
@@ -12,28 +11,24 @@ import { InvestmentInputModel } from '../investment-input.model';
 })
 export class UserInputComponent {
 
-    enteredInitialInvestment='0';
-    enteredAnnualInvestment= '0';
-    enteredExceptedReturn= '5';
-    enteredDuration= '10';
-  
-  @Output() Calculate = new EventEmitter<InvestmentInputModel>();
+    enteredInitialInvestment=signal('0');
+    enteredAnnualInvestment= signal('0');
+    enteredExceptedReturn= signal('5');
+    enteredDuration= signal('10');
 
-  private AppService = inject(AppService);
+  private investmentService = inject(InvestmentService);
 
   onSubmit(){  
-      // this.AppService.calculateInvestmentResults({
-      //   InitialInvestment: +this.enteredInitialInvestment,
-      //   AnnualInvestment: +this.enteredAnnualInvestment,
-      //   ExceptedReturn: +this.enteredExceptedReturn,
-      //   Duration: +this.enteredDuration
-      // });
-      
-      this.Calculate.emit({
-        InitialInvestment: +this.enteredInitialInvestment,
-        AnnualInvestment: +this.enteredAnnualInvestment,
-        ExceptedReturn: +this.enteredExceptedReturn,
-        Duration: +this.enteredDuration
+      this.investmentService.calculateInvestmentResults({
+        InitialInvestment: +this.enteredInitialInvestment(),
+        AnnualInvestment: +this.enteredAnnualInvestment(),
+        ExceptedReturn: +this.enteredExceptedReturn(),
+        Duration: +this.enteredDuration()
       });
+    
+    this.enteredInitialInvestment.set('0');
+    this.enteredAnnualInvestment.set('0');
+    this.enteredExceptedReturn.set('5');
+    this.enteredDuration.set('10');
   }
 }

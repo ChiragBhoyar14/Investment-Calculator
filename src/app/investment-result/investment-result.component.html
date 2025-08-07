@@ -1,27 +1,27 @@
-
-@if(!annualData || annualData.length === 0) {
-    <p class="center">Enter some value and press "Calculate"</p>
+@if(!annualData) {
+<p class="center">Enter some value and press "Calculate"</p>
 } @else {
-    
+
 <table>
-    <thead>
-        <th>Years</th>
-        <th>Investment Value</th>
-        <th>Intrest (Year)</th>
-        <th>Total Intrest</th>
-        <th>Invested Capital</th>
-    </thead>
-    <tbody>
-        @for( data of annualData; track data.year) {
-            <tr>
-                <td>{{data.year}}</td>
-                <td>{{data.valueEndOfYear | currency:'INR':'symbol':'1.2-2'}}</td>
-                <td>{{data.interest | currency:'INR':'symbol':'1.2-2'}}</td>
-                <td>{{data.totalInterest | currency:'INR':'symbol':'1.2-2'}}</td>
-                <td>{{data.totalAmountInvested | currency:'INR':'symbol':'1.2-2'}}</td>
-            </tr>
-        }
-    </tbody>
+  <thead>
+    <th>Years</th>
+    <th>Investment Value</th>
+    <th>Intrest (Year)</th>
+    <th>Total Intrest</th>
+    <th>Invested Capital</th>
+  </thead>
+  <tbody>
+    @for( data of annualData; track data.year) {
+    <tr>
+      <td>{{ data.year }}</td>
+      <td>{{ data.valueEndOfYear | currency : "INR" : "symbol" : "1.2-2" }}</td>
+      <td>{{ data.interest | currency : "INR" : "symbol" : "1.2-2" }}</td>
+      <td>{{ data.totalInterest | currency : "INR" : "symbol" : "1.2-2" }}</td>
+      <td>
+        {{ data.totalAmountInvested | currency : "INR" : "symbol" : "1.2-2" }}
+      </td>
+    </tr>
+    }
+  </tbody>
 </table>
 }
-

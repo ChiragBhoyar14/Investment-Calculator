@@ -4,13 +4,14 @@ import { AnnualDataResult } from './investment-input.model';
 
 @Injectable({providedIn:'root'})
 
-export class AppService {
+export class InvestmentService {
   
-  annualDataResult: AnnualDataResult[] = [];
+  annualDataResult?: AnnualDataResult[];
 
  calculateInvestmentResults(data: InvestmentInputModel ) {
   const annualData = [];
   let investmentValue = data.InitialInvestment;
+
 
   for (let i = 0; i < data.Duration; i++) {
     const year = i + 1;
@@ -29,7 +30,6 @@ export class AppService {
   }
 
    return this.annualDataResult = annualData;
-  // console.log(annualData);
 }
 
 }
