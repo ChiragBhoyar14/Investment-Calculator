@@ -49,7 +49,7 @@ Navigate to [http://localhost:4200](http://localhost:4200) in your browser.
 
 ## Learning Goals
 
-- Practice Angular standalone components and signals.
+- Practice Angular standalone components, signals and service.
 - Understand reactive state management.
 - Learn how to structure Angular projects.
 - Gain experience with TypeScript for safer, scalable code.
