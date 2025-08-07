@@ -7,10 +7,12 @@ This project is an Angular-based Investment Calculator created for learning and 
 - Enter initial investment, annual investment, expected return, and duration.
 - Calculates annual investment growth and displays results in a table.
 - Uses Angular standalone components, signals and service.
+- **Module-based approach available in the `feature/module-approach` branch!**  
+  If you prefer working with Angular's traditional NgModules, check out the [feature/module-approach](https://github.com/<your-repo-url>/tree/feature/module-approach) branch.
 
 ## Technology Stack
 
-- **Angular**: v18 (latest features including standalone components and signals)
+- **Angular**: v18 (latest features including standalone components, signals and services)
 - **TypeScript**: v5.4 (type-safe, modern JavaScript superset)
 
 ## Getting Started
@@ -53,7 +55,8 @@ Navigate to [http://localhost:4200](http://localhost:4200) in your browser.
 - Understand reactive state management.
 - Learn how to structure Angular projects.
 - Gain experience with TypeScript for safer, scalable code.
+- Explore both standalone and module-based Angular design patterns.
 
 ## License
 
-This project is for educational
+This project is for educational purposes only.
